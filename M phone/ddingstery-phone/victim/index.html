@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>피해자의 휴대폰</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="phone">
+    <!-- 1. 시작 화면 -->
+    <section id="startScreen" class="screen active start-screen" aria-label="시작 화면">
+      <div class="start-content">
+        <h1>피해자의 휴대폰</h1>
+        <p>화면을 클릭하세요</p>
+      </div>
+    </section>
+
+    <!-- 2. 퀴즈 화면 -->
+    <section id="quizScreen" class="screen quiz-screen" aria-label="퀴즈 화면">
+      <div class="status-bar">
+        <span>11:47</span>
+        <span>● ● ●</span>
+      </div>
+
+      <div class="quiz-content">
+        <h2>잠금 해제</h2>
+        <p class="subtext">문제를 풀어 비밀번호를 입력하세요.</p>
+
+        <div class="quiz-image-wrap">
+          <img
+            src="images/Q. 민트초코.png"
+            alt="민트초코 퀴즈"
+            class="quiz-image"
+          />
+        </div>
+
+        <form id="quizForm" autocomplete="off">
+          <input
+            id="answerInput"
+            type="text"
+            placeholder="정답 입력"
+            aria-label="퀴즈 정답"
+          />
+          <button type="submit">확인</button>
+        </form>
+
+        <p id="quizMessage" class="quiz-message" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- 3. 홈 화면 -->
+    <section id="homeScreen" class="screen home-screen" aria-label="휴대폰 홈 화면">
+      <div class="status-bar light">
+        <span>11:47</span>
+        <span>● ● ●</span>
+      </div>
+
+      <div class="home-title">피해자의 휴대폰</div>
+
+      <div class="apps">
+        <button id="galleryApp" class="app" type="button" aria-label="갤러리 열기">
+          <span class="app-icon gallery-icon" aria-hidden="true">
+            <span class="sun"></span>
+            <span class="mountain m1"></span>
+            <span class="mountain m2"></span>
+          </span>
+          <span class="app-name">갤러리</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 4. 갤러리 화면 -->
+    <section id="galleryScreen" class="screen gallery-screen" aria-label="갤러리">
+      <div class="gallery-header">
+        <button id="backButton" class="back-button" type="button" aria-label="뒤로가기">‹</button>
+        <strong>갤러리</strong>
+        <span class="header-spacer"></span>
+      </div>
+
+      <div class="photo-viewer">
+        <img src="images/이력서.png" alt="이력서 사진" class="resume-image" />
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
